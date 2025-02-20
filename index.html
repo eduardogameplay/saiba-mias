@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja de PCs</title>
+    <title>Loja de PCs - A Melhor Tecnologia para Você</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
 </head>
@@ -13,54 +13,121 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#products">Produtos</a></li>
+                <li><a href="#services">Serviços</a></li>
                 <li><a href="#about">Sobre</a></li>
                 <li><a href="#contact">Contato</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#cart">Carrinho</a></li>
             </ul>
         </nav>
-    </header>
-    <section id="home">
-        <h2>Bem-vindo à nossa loja!</h2>
-        <p>Encontre os melhores computadores para games e escritório.</p>
-    </section>
-    <section id="products" class="container">
-        <div class="product">
-            <img src="pc1.jpg" alt="PC Gamer Ultra">
-            <h2>PC Gamer Ultra</h2>
-            <p>Processador Ryzen 7, 16GB RAM, RTX 3060</p>
-            <button>Comprar</button>
-        </div>
-        <div class="product">
-            <img src="pc2.jpg" alt="PC Escritório">
-            <h2>PC Escritório</h2>
-            <p>Processador i5, 8GB RAM, SSD 256GB</p>
-            <button>Comprar</button>
-        </div>
-        <div class="product">
-            <img src="pc3.jpg" alt="PC Workstation">
-            <h2>PC Workstation</h2>
-            <p>Processador Xeon, 32GB RAM, Quadro RTX 4000</p>
-            <button>Comprar</button>
-        </div>
-    </section>
-    <section id="about">
-        <h2>Sobre Nós</h2>
-        <p>Somos uma loja especializada em computadores de alta performance para todos os usos.</p>
-    </section>
-    <section id="contact">
-        <h2>Contato</h2>
-        <form>
-            <label for="name">Nome:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Mensagem:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
-    <footer>
-        <p>&copy; 2025 Loja de PCs. Todos os direitos reservados.</p>
-    </footer>
+    </header><section id="home">
+    <h2>Bem-vindo à Loja de PCs</h2>
+    <p>Os melhores computadores para games, trabalho e estudos, com preços imbatíveis.</p>
+    <a href="#products" class="btn">Ver Produtos</a>
+</section>
+
+<section id="products" class="container">
+    <h2>Nossos Produtos</h2>
+    <div class="product">
+        <img src="pc1.jpg" alt="PC Gamer Ultra">
+        <h2>PC Gamer Ultra</h2>
+        <p>Processador Ryzen 7, 16GB RAM, RTX 3060</p>
+        <span class="price">R$ 6.500,00</span>
+        <button onclick="addToCart('PC Gamer Ultra', 6500)">Adicionar ao Carrinho</button>
+    </div>
+    <div class="product">
+        <img src="pc2.jpg" alt="PC Escritório">
+        <h2>PC Escritório</h2>
+        <p>Processador i5, 8GB RAM, SSD 256GB</p>
+        <span class="price">R$ 3.200,00</span>
+        <button onclick="addToCart('PC Escritório', 3200)">Adicionar ao Carrinho</button>
+    </div>
+    <div class="product">
+        <img src="pc3.jpg" alt="PC Workstation">
+        <h2>PC Workstation</h2>
+        <p>Processador Xeon, 32GB RAM, Quadro RTX 4000</p>
+        <span class="price">R$ 12.500,00</span>
+        <button onclick="addToCart('PC Workstation', 12500)">Adicionar ao Carrinho</button>
+    </div>
+</section>
+
+<section id="cart">
+    <h2>Seu Carrinho</h2>
+    <ul id="cart-items"></ul>
+    <p>Total: R$ <span id="cart-total">0.00</span></p>
+    <button onclick="checkout()">Finalizar Compra</button>
+</section>
+
+<section id="services">
+    <h2>Nossos Serviços</h2>
+    <p>Além da venda de PCs, oferecemos serviços de montagem personalizada, suporte técnico e consultoria para encontrar o melhor equipamento para você.</p>
+</section>
+
+<section id="about">
+    <h2>Sobre Nós</h2>
+    <p>Somos uma loja especializada em computadores de alta performance para todos os usos.</p>
+    <p>Trabalhamos com as melhores marcas e garantimos qualidade e preço justo.</p>
+</section>
+
+<section id="faq">
+    <h2>Perguntas Frequentes</h2>
+    <details>
+        <summary>Quais formas de pagamento vocês aceitam?</summary>
+        <p>Aceitamos cartões de crédito, débito, Pix e boleto bancário.</p>
+    </details>
+    <details>
+        <summary>Os PCs têm garantia?</summary>
+        <p>Sim, todos os nossos computadores possuem garantia de 12 meses.</p>
+    </details>
+    <details>
+        <summary>Vocês fazem entrega?</summary>
+        <p>Sim, entregamos para todo o Brasil com frete calculado na finalização da compra.</p>
+    </details>
+</section>
+
+<section id="contact">
+    <h2>Fale Conosco</h2>
+    <form>
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Mensagem:</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2025 Loja de PCs. Todos os direitos reservados.</p>
+    <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Serviço</a></p>
+</footer>
+
+<script>
+    let cart = [];
+    function addToCart(product, price) {
+        cart.push({ product, price });
+        updateCart();
+    }
+    function updateCart() {
+        let cartItems = document.getElementById('cart-items');
+        let cartTotal = document.getElementById('cart-total');
+        cartItems.innerHTML = '';
+        let total = 0;
+        cart.forEach(item => {
+            let li = document.createElement('li');
+            li.textContent = `${item.product} - R$ ${item.price.toFixed(2)}`;
+            cartItems.appendChild(li);
+            total += item.price;
+        });
+        cartTotal.textContent = total.toFixed(2);
+    }
+    function checkout() {
+        alert('Compra finalizada! Obrigado por comprar conosco.');
+        cart = [];
+        updateCart();
+    }
+</script>
+
 </body>
 </html>
- 
