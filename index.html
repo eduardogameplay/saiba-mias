@@ -1,0 +1,74 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de PCs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 15px;
+            font-size: 24px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .product {
+            background: white;
+            margin: 15px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .product img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .product h2 {
+            font-size: 20px;
+        }
+        .product p {
+            color: #555;
+        }
+        .product button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .product button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <header>Loja de PCs</header>
+    <div class="container">
+        <div class="product">
+            <img src="pc1.jpg" alt="PC Gamer">
+            <h2>PC Gamer Ultra</h2>
+            <p>Processador Ryzen 7, 16GB RAM, RTX 3060</p>
+            <button>Comprar</button>
+        </div>
+        <div class="product">
+            <img src="pc2.jpg" alt="PC Escritório">
+            <h2>PC Escritório</h2>
+            <p>Processador i5, 8GB RAM, SSD 256GB</p>
+            <button>Comprar</button>
+        </div>
+    </div>
+</body>
+</html>
